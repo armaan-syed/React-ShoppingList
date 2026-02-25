@@ -1,0 +1,166 @@
+/* ===== GLOBAL RESET ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #1e293b, #020617);
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== MAIN CONTAINER ===== */
+
+.container {
+  width: 100%;
+  max-width: 550px;
+  padding: 77px;
+  background: #e49139;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+/* ===== TITLE ===== */
+
+h1 {
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 100px;
+}
+
+/* ===== ADD FORM ===== */
+
+.add-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-form input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.add-form button {
+  padding: 12px 18px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.add-form button:hover {
+  background: #16a34a;
+}
+
+/* ===== LIST ===== */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== ITEM CARD ===== */
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  padding: 14px;
+  border-radius: 10px;
+  transition: 0.2s;
+  word-break: break-word;
+}
+
+.item:hover {
+  transform: translateY(-2px);
+}
+
+.item span {
+  cursor: pointer;
+  flex: 1;
+  font-size: 16px;
+}
+
+.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.item button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* ===== EMPTY TEXT ===== */
+
+.empty {
+  text-align: center;
+  opacity: 0.6;
+}
+
+/* ===================================================
+   📱 MOBILE RESPONSIVENESS
+=================================================== */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .add-form {
+    flex-direction: column;
+  }
+
+  .add-form button {
+    width: 100%;
+  }
+
+  .item {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .item span {
+    font-size: 15px;
+  }
+}
+
+/* ===================================================
+   📲 VERY SMALL DEVICES
+=================================================== */
+
+@media (max-width: 350px) {
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .item {
+    padding: 10px;
+  }
+
+}
